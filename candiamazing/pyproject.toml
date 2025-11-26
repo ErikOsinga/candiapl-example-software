@@ -1,0 +1,20 @@
+[project]
+name = "candiamazing"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "ErikOsinga", email = "erikosinga876@hotmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "astropy>=7.2.0",
+    "numpy>=2.3.5",
+]
+
+[project.scripts]
+candiamazing = "candiamazing:main"
+
+[build-system]
+requires = ["uv_build>=0.9.13,<0.10.0"]
+build-backend = "uv_build"
