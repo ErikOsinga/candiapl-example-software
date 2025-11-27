@@ -1,0 +1,4 @@
+[rm]
+electron_density_cm3 = 0.03
+magnetic_field_uG = 5.0
+path_length_pc = 1000.0
