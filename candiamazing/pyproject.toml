@@ -19,3 +19,25 @@ calcrm = "candiamazing.cli:main"
 [build-system]
 requires = ["uv_build>=0.9.13,<0.10.0"]
 build-backend = "uv_build"
+
+[project.optional-dependencies]
+dev = ["ruff"]
+
+[tool.ruff]
+# Apply to both src and tests by default
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+# Can expand this as far as user wants
+select = [
+  "E",   # pycodestyle (PEP8) errors
+  "F",   # pyflakes
+  "I",   # isort-like import sorting
+  "B",   # bugbear (common bugs)
+  "UP",  # pyupgrade (modern Python idioms)
+]
+ignore = [
+  "E501",  # line length
+]
+
+
