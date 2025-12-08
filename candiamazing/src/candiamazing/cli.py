@@ -1,10 +1,9 @@
 """Command-line interface to compute Faraday rotation.
 
-Given an input configuration file, will print the amount of Faraday rotation expected 
+Given an input configuration file, will print the amount of Faraday rotation expected
 under various assumptions about the electron density and magnetic field along the line
 of sight.
 """
-
 
 import argparse
 from pathlib import Path
