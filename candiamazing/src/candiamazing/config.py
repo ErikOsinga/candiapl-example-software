@@ -1,3 +1,6 @@
+"""Module to read input configuration files."""
+
+
 import tomllib
 from dataclasses import dataclass
 from pathlib import Path
@@ -13,7 +16,8 @@ class RMConfig:
     Parameters
     ----------
         electron_density: Free electron density as an astropy Quantity.
-        magnetic_field: Magnetic field component along the line of sight as an astropy Quantity.
+        magnetic_field: Magnetic field component along the line of sight 
+                        as an astropy Quantity.
         path_length: Path length along the line of sight as an astropy Quantity.
     """
 

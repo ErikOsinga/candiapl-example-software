@@ -1,3 +1,10 @@
+"""Core numerical routines for rotation measures and related quantities.
+
+This module provides functions for computing Faraday rotation measures
+under various assumptions about the electron density and magnetic field
+along the line of sight.
+"""
+
 from astropy import units as u
 
 

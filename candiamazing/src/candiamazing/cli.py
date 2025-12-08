@@ -1,3 +1,11 @@
+"""Command-line interface to compute Faraday rotation.
+
+Given an input configuration file, will print the amount of Faraday rotation expected 
+under various assumptions about the electron density and magnetic field along the line
+of sight.
+"""
+
+
 import argparse
 from pathlib import Path
 
@@ -6,6 +14,7 @@ from candiamazing.core import rotation_measure_uniform
 
 
 def parse_args():
+    """Parse arguments from CLI."""
     parser = argparse.ArgumentParser(
         description="Compute rotation measure from a configuration file.",
     )
@@ -20,6 +29,7 @@ def parse_args():
 
 
 def main():
+    """Compute Faraday rotation given input file."""
     args = parse_args()
 
     cfg = load_config(args.config)
