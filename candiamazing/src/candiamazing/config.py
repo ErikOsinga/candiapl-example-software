@@ -9,13 +9,14 @@ from astropy import units as u
 class RMConfig:
     """
     Dataclass to hold rotation measure configuration parameters.
-    
+
     Parameters
     ----------
         electron_density: Free electron density as an astropy Quantity.
         magnetic_field: Magnetic field component along the line of sight as an astropy Quantity.
         path_length: Path length along the line of sight as an astropy Quantity.
     """
+
     electron_density: u.Quantity
     magnetic_field: u.Quantity
     path_length: u.Quantity
@@ -46,4 +47,3 @@ def load_config(path: str | Path) -> RMConfig:
         magnetic_field=b,
         path_length=length,
     )
-

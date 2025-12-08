@@ -30,7 +30,9 @@ def main():
     )
 
     # Astropy quantities support formatting with f-strings
-    print(f"Electron density: {cfg.electron_density.value} [{cfg.electron_density.unit}]")
+    print(
+        f"Electron density: {cfg.electron_density.value} [{cfg.electron_density.unit}]"
+    )
     print(f"Magnetic field:   {cfg.magnetic_field.value} [{cfg.magnetic_field.unit}]")
     print(f"Path length:      {cfg.path_length.value} [{cfg.path_length.unit}]")
     print("---")

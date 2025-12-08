@@ -38,4 +38,3 @@ def rotation_measure_uniform(
     factor = 0.812 * u.rad / (u.m**2)
     rm = factor * ne_val * b_val * l_val
     return rm
-
