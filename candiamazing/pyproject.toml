@@ -21,7 +21,7 @@ requires = ["uv_build>=0.9.13,<0.10.0"]
 build-backend = "uv_build"
 
 [project.optional-dependencies]
-dev = ["ruff", "mypy"]
+dev = ["ruff", "mypy", "pytest", "pytest-cov"]
 
 [tool.ruff]
 # Apply to both src and tests by default
@@ -62,4 +62,10 @@ strict = false
 warn_unused_ignores = true
 
 
-
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = [
+  "-ra",   # detailed report at the end, including all except passed tests
+  "--cov=src", # check coverage of code in src/ directory
+  "--cov-report=term-missing", # prints uncovered lines at the end
+]
